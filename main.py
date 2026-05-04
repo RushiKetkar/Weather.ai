@@ -12,13 +12,10 @@ from mcp.client.sse        import sse_client
 
 import rag
 
-# ── Models ─────────────────────────────────────────────────────────────────
 LANGUAGE_MODEL  = "hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF"
 MCP_SERVER_URL  = "http://localhost:8000/sse"
-MCP_STARTUP_SEC = 3   # seconds to wait for the server to be ready
+MCP_STARTUP_SEC = 3 
 
-
-# ── Helpers ────────────────────────────────────────────────────────────────
 
 def _start_mcp_server() -> subprocess.Popen:
     """Launch mcp_server.py in a subprocess and return the handle."""
